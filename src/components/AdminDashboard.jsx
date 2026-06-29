@@ -45,7 +45,7 @@ const AdminDashboard = () => {
 
   const sidebarItems = [
     { id: 'patient-directory', label: 'Patient Directory', icon: FaUsers, path: '/patient-directory' },
-    { id: 'staff-roster', label: 'Staff Roster', icon: FaUserMd, path: '/staff-roster' },
+    // { id: 'staff-roster', label: 'Staff Roster', icon: FaUserMd, path: '/staff-roster' },
     { id: 'analytics', label: 'Analytics', icon: FaChartLine, path: '/analytics' },
   ];
 
@@ -65,7 +65,7 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div style={{backgroundImage: `url(${backimg})`}} className="flex h-screen bg-gray-50 dark:bg-gray-900">
+    <div style={{backgroundImage: `url(${backimg})`}} className="flex h-screen bg-cover bg-center bg-gray-50 dark:bg-gray-900">
       {/* Sidebar */}
       <aside className={`
         fixed md:relative z-50 h-full bg-gray-900 dark:bg-gray-900 border-r border-gray-700 
@@ -183,12 +183,12 @@ const AdminDashboard = () => {
 
           {/* Live Queue and Roster Status */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-3">
               <LiveQueue queue={queue} onPatientClick={handlePatientClick} updateQueue={updateQueue} />
             </div>
-            <div>
+            {/* <div>
               <RosterStatus staff={staff} />
-            </div>
+            </div> */}
           </div>
 
           {/* System Health */}

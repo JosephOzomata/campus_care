@@ -28,7 +28,7 @@ const AdminLayout = ({ children, title }) => {
   const sidebarItems = [
     { id: 'dashboard', label: 'Dashboard', icon: FaUsers, path: '/admin' },
     { id: 'patient-directory', label: 'Patient Directory', icon: FaUsers, path: '/patient-directory' },
-    { id: 'staff-roster', label: 'Staff Roster', icon: FaUserMd, path: '/staff-roster' },
+    // { id: 'staff-roster', label: 'Staff Roster', icon: FaUserMd, path: '/staff-roster' },
     { id: 'analytics', label: 'Analytics', icon: FaChartLine, path: '/analytics' },
   ];
 

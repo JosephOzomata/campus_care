@@ -54,8 +54,8 @@ const LiveQueue = ({ queue, onPatientClick, updateQueue }) => {
               >
                 <td className="px-4 py-3">
                   <div>
-                    <p className="font-medium text-gray-900 dark:text-white">{patient.name}</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-400">ID: {patient.id}</p>
+                    <p className="font-medium text-gray-900 dark:text-white">{patient.patientName}</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">ID: {patient.patientId}</p>
                   </div>
                 </td>
                 <td className="px-4 py-3">

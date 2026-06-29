@@ -168,7 +168,7 @@ useEffect(() => {
               <div>
                 <p className="text-sm text-gray-500 dark:text-gray-400">Total Patients</p>
                 <p className="text-2xl font-bold text-gray-900 dark:text-white">{stats.totalPatients}</p>
-                <p className="text-xs text-green-600 mt-1">+12% from last month</p>
+                {/* <p className="text-xs text-green-600 mt-1">+12% from last month</p> */}
               </div>
               <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
                 <FaUsers className="text-blue-600 dark:text-blue-400 text-xl" />
@@ -207,7 +207,7 @@ useEffect(() => {
               <div>
                 <p className="text-sm text-gray-500 dark:text-gray-400">Avg. Treatment Time</p>
                 <p className="text-2xl font-bold text-gray-900 dark:text-white">{stats.averageTreatmentTime} mins</p>
-                <p className="text-xs text-blue-600 mt-1">-5 mins from last week</p>
+                {/* <p className="text-xs text-blue-600 mt-1">-5 mins from last week</p> */}
               </div>
               <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
                 <FaChartLine className="text-purple-600 dark:text-purple-400 text-xl" />

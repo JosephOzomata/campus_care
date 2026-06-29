@@ -152,7 +152,7 @@ const Login = () => {
   }
 
   return (
-    <div style={{backgroundImage: `url(${backimg})`}}  className="min-h-screen  bg-cover   bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4))  flex items-center justify-center p-4">
+    <div style={{backgroundImage: `url(${backimg})`}}  className="min-h-screen   bg-cover   bg-[linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4))  flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -181,7 +181,7 @@ const Login = () => {
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
               {role === 'patient' ? 'Student Login' : 'Admin Access'}
             </h2>
-            <p className="text-gray-500 dark:text-gray-400 mt-1">
+            <p className="text-white mt-1">
               {role === 'patient' 
                 ? 'Enter your student ID and name to continue'
                 : 'Enter admin credentials to access dashboard'}
@@ -193,14 +193,14 @@ const Login = () => {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Student ID
+                    Student Clinic ID
                   </label>
                   <input
                     type="text"
                     value={formData.id}
                     onChange={(e) => setFormData({ ...formData, id: e.target.value })}
                     placeholder="e.g., #0492-B or 0492-B"
-                    className="w-full px-4 py-3 border border-bottom-1 border-bottom-white focus:ring-0 active-ring-0 focus:border-transparent"
+                    className="w-full px-4 py-3 border-b-1 border-b-white focus:outline-none text-white"
                     required
                   />
                 </div>
@@ -213,7 +213,7 @@ const Login = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Enter your full name"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+     className="w-full px-4 py-3 border-b-1 border-b-white focus:outline-none text-white"
                     required
                   />
                 </div>
@@ -261,7 +261,7 @@ const Login = () => {
                     value={adminUser}
                     onChange={(e) => setAdminUser(e.target.value)}
                     placeholder="admin@campuscare.edu"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border-b-1 border-b-white focus:outline-none text-white"
                     required
                   />
                 </div>
@@ -274,7 +274,7 @@ const Login = () => {
                     value={adminPass}
                     onChange={(e) => setAdminPass(e.target.value)}
                     placeholder="••••••••"
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border-b-1 border-b-white focus:outline-none text-white"
                     required
                   />
                 </div>
@@ -294,7 +294,7 @@ const Login = () => {
                   // type="submit"
                   onClick={() => setRole(null)}
                   // disabled={loading}
-                  className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-xl font-medium hover:from-blue-600 hover:to-blue-700 transition-all disabled:opacity-50"
+                  className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-xl font-medium hover:from-purple-600 hover:to-purple-700 transition-all disabled:opacity-50"
                 >
                   {/* {loading ? 'Logging in...' : 'Login'} */}
                   Back to Home
