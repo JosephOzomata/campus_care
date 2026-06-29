@@ -1,0 +1,57 @@
+
+@import "tailwindcss";
+
+/* Custom styles */
+@layer base {
+  body {
+    @apply bg-white text-black;
+  }
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700;
+  }
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-lg transition-all duration-200 cursor-pointer;
+  }
+  .sidebar-item-active {
+    @apply bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400;
+  }
+  .sidebar-item-inactive {
+    @apply text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700/50;
+  }
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors cursor-pointer;
+  }
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors cursor-pointer;
+  }
+  .priority-immediate {
+    @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400;
+  }
+  .priority-urgent {
+    @apply bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400;
+  }
+  .priority-routine {
+    @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800 rounded-full;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
